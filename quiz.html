@@ -53,6 +53,15 @@ stats"></a></div></noscript>
     max_life = max_bish = max_womn = max_poli = max_mass = max_clth = max_host = 0;
     var life, bish, womn, poli, mass, clth, host; // User's scores
     life = bish = womn = poli = mass = clth = host = 0;
+  
+    let life_array = new Array(questions.length);
+    let bish_array = new Array(questions.length);
+    let womn_array = new Array(questions.length);
+    let poli_array = new Array(questions.length);
+    let mass_array = new Array(questions.length);
+    let clth_array = new Array(questions.length);
+    let host_array = new Array(questions.length);
+        
     var qn = 0; // Question number
     var prev_answer = null;
     init_question();
@@ -114,6 +123,13 @@ stats"></a></div></noscript>
         return (100*(max+score)/(2*max)).toFixed(1)
     }
     function results() {
+        let final_life = life_array.reduce((a, b) => a + b, 0)
+        let final_bish = bish_array.reduce((a, b) => a + b, 0)
+        let final_womn = womn_array.reduce((a, b) => a + b, 0)
+        let final_poli = poli_array.reduce((a, b) => a + b, 0)
+        let final_mass = mass_array.reduce((a, b) => a + b, 0)
+        let final_clth = clth_array.reduce((a, b) => a + b, 0)
+        let final_host = host_array.reduce((a, b) => a + b, 0)
         location.href = `results.html`
             + `?l=${calc_score(life,max_life)}`
             + `&b=${calc_score(bish,max_bish)}`
