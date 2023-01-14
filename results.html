@@ -72,7 +72,7 @@
     <p>신학적 성향을 맞추는건 진행 중인 작업이고, 가치관과 축을 맞추는 것보다 부정확합니다.</p>
     <p>페이지 위쪽에 있는 URL을 복붙하거나 아래의 이미지를 이용해 결과를 공유할 수 있습니다. (링크)에서 설문조사에 참여해주세요. 맞춰진 성향이 틀리다고 생각하시거나 테스트 수치가 수정이 필요하다 생각하신다면 나온 결과와 자신의 성향을 ebisuzawa7919@gmail.com(영문)으로 보내주세요. 평가나 질문, 비판 등도 보내셔도됩니다.</p>
     <hr/>
-    <canvas id="banner" width=800 height=1000 style="font-family:Montserrat"></canvas>
+    <img src="" id="banner">
     <button class="button" onclick="location.href='index.html';" style="background-color: #2196f3;">처음으로</button> <br>
 
     <script>
@@ -178,10 +178,12 @@
         }
     
         window.onload = function() {
-            var c = document.getElementById("banner")
+            var c = document.createElement("canvas")
             var ctx = c.getContext("2d")
+            c.width = 800;
+            c.height = 1010;
             ctx.fillStyle = "#EEEEEE"
-            ctx.fillRect(0,0,800,1000)
+            ctx.fillRect(0,0,800,1010);
     
             img = document.getElementById("img-progressive")
             ctx.drawImage(img, 20, 170, 100, 100);
