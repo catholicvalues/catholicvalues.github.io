@@ -95,6 +95,13 @@
             return (100*(max+score)/(2*max)).toFixed(1)
         }
         function results() {
+            let final_life = life_array.reduce((a, b) => a + b, 0)
+            let final_bish = bish_array.reduce((a, b) => a + b, 0)
+            let final_womn = womn_array.reduce((a, b) => a + b, 0)
+            let final_poli = poli_array.reduce((a, b) => a + b, 0)
+            let final_mass = mass_array.reduce((a, b) => a + b, 0)
+            let final_clth = clth_array.reduce((a, b) => a + b, 0)
+            let final_host = host_array.reduce((a, b) => a + b, 0)
             location.href = `results.html`
                 + `?l=${calc_score(life,max_life)}`
                 + `&b=${calc_score(bish,max_bish)}`
