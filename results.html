@@ -19,49 +19,49 @@
     
     <h1>결과</h1>
     
-    <h2>성·생명윤리: <span class="weight-300" id="economic-label"></span></h2>
+    <h2>성·생명윤리: <span class="weight-300" id="life-label"></span></h2>
     <div class="axis">
         <img id="img-progressive" src="value_images/progressive.svg" height="128pt"/>
         <div class="bar progressive" id="bar-progressive"><div class="text-wrapper" id="progressive"></div></div>
         <div class="bar traditional" id="bar-traditional"><div class="text-wrapper" id="traditional"></div></div>
         <img id="img-traditional" src="value_images/traditional.svg" height="128pt"/>
     </div>
-    <h2>교계제도: <span class="weight-300" id="diplomatic-label"></span></h2>
+    <h2>교계제도: <span class="weight-300" id="bish-label"></span></h2>
     <div class="axis">
         <img id="img-regional" src="value_images/regional.svg" height="128pt"/>
         <div class="bar regional" id="bar-regional"><div class="text-wrapper" id="regional"></div></div>
         <div class="bar holysee" id="bar-holysee"><div class="text-wrapper" id="holysee"></div></div>
         <img id="img-holysee" src="value_images/holysee.svg" height="128pt"/>
     </div>
-    <h2>여성과 교회: <span class="weight-300" id="state-label"></span></h2>
+    <h2>여성과 교회: <span class="weight-300" id="women-label"></span></h2>
     <div class="axis">
         <img id="img-women" src="value_images/women.svg" height="128pt"/>
         <div class="bar women" id="bar-women"><div class="text-wrapper" id="women"></div></div>
         <div class="bar antiwomen" id="bar-antiwomen"><div class="text-wrapper" id="antiwomen"></div></div>
         <img id="img-antiwomen" src="value_images/antiwomen.svg" height="128pt"/>
     </div>
-    <h2>사회와 교회: <span class="weight-300" id="society-label"></span></h2>
+    <h2>사회와 교회: <span class="weight-300" id="poli-label"></span></h2>
     <div class="axis">
         <img id="img-society" src="value_images/society.svg" height="128pt"/>
         <div class="bar society" id="bar-society"><div class="text-wrapper" id="society"></div></div>
         <div class="bar separation" id="bar-separation"><div class="text-wrapper" id="separation"></div></div>
         <img id="img-separation" src="value_images/separation.svg" height="128pt"/>
     </div>
-    <h2>전례: <span class="weight-300" id="diplomatic-label"></span></h2>
+    <h2>전례: <span class="weight-300" id="mass-label"></span></h2>
     <div class="axis">
         <img id="img-masstrad" src="value_images/masstrad.svg" height="128pt"/>
         <div class="bar masstrad" id="bar-masstrad"><div class="text-wrapper" id="masstrad"></div></div>
         <div class="bar massprog" id="bar-massprog"><div class="text-wrapper" id="massprog"></div></div>
         <img id="img-massprog" src="value_images/massprog.svg" height="128pt"/>
     </div>
-    <h2>복장: <span class="weight-300" id="state-label"></span></h2>
+    <h2>복장: <span class="weight-300" id="clth-label"></span></h2>
     <div class="axis">
         <img id="img-clthprog" src="value_images/clthprog.svg" height="128pt"/>
         <div class="bar clthprog" id="bar-clthprog"><div class="text-wrapper" id="clthprog"></div></div>
         <div class="bar clthtrad" id="bar-clthtrad"><div class="text-wrapper" id="clthtrad"></div></div>
         <img id="img-clthtrad" src="value_images/clthtrad.svg" height="128pt"/>
     </div>
-    <h2>성찬과 성체: <span class="weight-300" id="society-label"></span></h2>
+    <h2>성찬과 성체: <span class="weight-300" id="host-label"></span></h2>
     <div class="axis">
         <img id="img-hostprog" src="value_images/hostprog.svg" height="128pt"/>
         <div class="bar hostprog" id="bar-hostprog"><div class="text-wrapper" id="hostprog"></div></div>
@@ -147,7 +147,7 @@
         setBarValue("hosttrad", hosttrad)
     
         document.getElementById("life-label").innerHTML = setLabel(progressive, lifeArray)
-        document.getElementById("church-label").innerHTML = setLabel(regional, bishArray)
+        document.getElementById("bish-label").innerHTML = setLabel(regional, bishArray)
         document.getElementById("women-label").innerHTML = setLabel(women, womnArray)
         document.getElementById("society-label").innerHTML = setLabel(society, poliArray)
         document.getElementById("mass-label").innerHTML = setLabel(massprog, massArray)
