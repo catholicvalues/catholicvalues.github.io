@@ -1,0 +1,301 @@
+<head>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+<link href='style.css' rel='stylesheet' type='text/css'>
+<title>CatholicValues 결과</title>
+<link rel="icon" type="x-icon" href="icon.png">
+<link rel="shortcut icon" type="x-icon" href="icon.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<script>
+  version = "정식 #1" //Remember to update this before making changes to the test itself!
+</script>
+</head>
+<script type="application/javascript"
+        src="ideologies.js">
+</script>
+
+<body>
+<h1>CatholicValues</h1>
+<hr>
+
+<h1>결과</h1>
+
+<h2>성·생명윤리: <span class="weight-300" id="life-label"></span></h2>
+<div class="axis">
+    <img id="img-progressive" src="value_images/progressive.svg" class="img-something"/>
+    <div class="bar progressive" id="bar-progressive"><div class="text-wrapper" id="progressive"></div></div>
+    <div class="bar traditional" id="bar-traditional"><div class="text-wrapper" id="traditional"></div></div>
+    <img id="img-traditional" src="value_images/traditional.svg" class="img-something"/>
+</div>
+<h2>교계제도: <span class="weight-300" id="bish-label"></span></h2>
+<div class="axis">
+    <img id="img-regional" src="value_images/regional.svg" class="img-something"/>
+    <div class="bar regional" id="bar-regional"><div class="text-wrapper" id="regional"></div></div>
+    <div class="bar holysee" id="bar-holysee"><div class="text-wrapper" id="holysee"></div></div>
+    <img id="img-holysee" src="value_images/holysee.svg" class="img-something"/>
+</div>
+<h2>여성과 교회: <span class="weight-300" id="womn-label"></span></h2>
+<div class="axis">
+    <img id="img-women" src="value_images/women.svg" class="img-something"/>
+    <div class="bar women" id="bar-women"><div class="text-wrapper" id="women"></div></div>
+    <div class="bar antiwomen" id="bar-antiwomen"><div class="text-wrapper" id=antiwomen"></div></div>
+    <img id="img-antiwomen" src="value_images/antiwomen.svg" class="img-something"/>
+</div>
+<h2>사회와 교회: <span class="weight-300" id="poli-label"></span></h2>
+<div class="axis">
+    <img id="img-society" src="value_images/society.svg" class="img-something"/>
+    <div class="bar society" id="bar-society"><div class="text-wrapper" id="society"></div></div>
+    <div class="bar separation" id="bar-separation"><div class="text-wrapper" id="separation"></div></div>
+    <img id="img-separation" src="value_images/separation.svg" class="img-something"/>
+<h2>전례: <span class="weight-300" id="mass-label"></span></h2>
+<div class="axis">
+    <img id="img-masstrad" src="value_images/masstrad.svg" class="img-something"/>
+    <div class="bar masstrad" id="bar-masstrad"><div class="text-wrapper" id="masstrad"></div></div>
+    <div class="bar massprog" id="bar-massprog"><div class="text-wrapper" id="massprog"></div></div>
+    <img id="img-massprog" src="value_images/massprog.svg" class="img-something"/>
+<h2>복장: <span class="weight-300" id="clth-label"></span></h2>
+<div class="axis">
+    <img id="img-clthprog" src="value_images/clthprog.svg" class="img-something"/>
+    <div class="bar clthprog" id="bar-clthprog"><div class="text-wrapper" id="clthprog"></div></div>
+    <div class="bar clthtrad" id="bar-clthtrad"><div class="text-wrapper" id="clthtrad"></div></div>
+    <img id="img-clthtrad" src="value_images/clthtrad.svg" class="img-something"/>
+<h2>성찬과 성체: <span class="weight-300" id="host-label"></span></h2>
+<div class="axis">
+    <img id="img-hostprog" src="value_images/hostprog.svg" class="img-something"/>
+    <div class="bar hostprog" id="bar-hostprog"><div class="text-wrapper" id="hostprog"></div></div>
+    <div class="bar hosttrad" id="bar-hosttrad"><div class="text-wrapper" id="hosttrad"></div></div>
+    <img id="img-hosttrad" src="value_images/hosttrad.svg" class="img-something"/>
+</div>
+<h2>가장 가까움: <span class="weight-300" id="ideology-label"></span></h2>
+<p>신학적 스탠스를 맞추는건 진행 중인 작업이고, 가치관과 축을 맞추는 것보다 부정확합니다.</p>
+<p>페이지 위쪽에 있는 URL을 복붙하거나 아래의 이미지를 이용해 결과를 공유할 수 있습니다. 통계 자료 마련을 위해 ebisuzawa7919@gmail.com으로 결과를 보내주시거나 (구글 링크)를 통해 설문조사에 참여해주세요. 평가나 질문, 비판 등도 보내셔도 됩니다.</p>
+<hr/>
+<canvas id="banner" width=800 height=650 style="font-family:Montserrat"></canvas>
+<button class="button" onclick="location.href='index.html';" style="background-color: #2196f3;">처음으로</button> <br>
+<!-- Website visit statistics - no personal information is collected! 
+<script type="text/javascript">
+var sc_project=11325211;
+var sc_invisible=1;
+var sc_security="fd9f0659";
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11325211/0/fd9f0659/1/" alt="web
+stats"></a></div></noscript>-->
+<script>
+    function getQueryVariable(variable)
+    {
+           var query = window.location.search.substring(1)
+           var vars = query.split("&")
+           for (var i=0;i<vars.length;i++) {
+                   var pair = vars[i].split("=")
+                   if(pair[0] == variable) {return pair[1]}
+           }
+           return(NaN);
+    }
+
+    function setBarValue(name, value) {
+        innerel = document.getElementById(name)
+        outerel = document.getElementById("bar-" + name)
+        outerel.style.width = (value + "%")
+        innerel.innerHTML = (value + "%")
+        if (innerel.offsetWidth + 20 > outerel.offsetWidth) {
+            innerel.style.visibility = "hidden"
+        }
+    }
+
+    lifeArray = '전통적, 보수적, 중도보수적, 중도, 중도개혁적, 개혁적, 급진적'.split(', ')
+    bishArray = '성직자 관료주의, 관료주의, 일치적, 균형적, 분권주의, 민주주의, 총체적 민주주의'.split(', ')
+    womnArray = '전통적, 보수적, 중도보수적, 중도, 중도개혁적, 개혁적, 급진적'.split(', ')
+    poliArray = '완전한 정교분리, 제한적 정교분리, 중도적 정교분리, 중도, 중도적 사회참여, 제한적 사회참여, 완전한 사회참여'.split(', ')
+    massArray = '전통적, 보수적, 중도보수적, 중도, 중도개혁적, 개혁적, 급진적'.split(', ')
+    clthArray = '복제 고수, 보수적, 중도보수적, 중도, 중도개혁적, 복제 개혁, 복제 철폐'.split(', ')
+    hostArray = '전통적, 보수적, 중도보수적, 중도, 중도개혁적, 개혁적, 급진적'.split(', ')
+
+    function setLabel(val,ary) {
+        if (val > 100) { return "" } else
+        if (val > 90) { return ary[0] } else
+        if (val > 75) { return ary[1] } else
+        if (val > 60) { return ary[2] } else
+        if (val >= 40) { return ary[3] } else
+        if (val >= 25) { return ary[4] } else
+        if (val >= 10) { return ary[5] } else
+        if (val >= 0) { return ary[6] } else
+        	{return ""}
+    }
+
+    progressive  = getQueryVariable("l")
+    regional     = getQueryVariable("b")
+    women   = getQueryVariable("w")
+    society  = getQueryVariable("p")
+    masstrad  = getQueryVariable("m")
+    clthprog     = getQueryVariable("c")
+    hostprog   = getQueryVariable("h")
+    traditional    = (100 - progressive).toFixed(1)
+    holysee     = (100 - regional   ).toFixed(1)
+    antiwomen = (100 - women ).toFixed(1)
+    separation = (100 - society).toFixed(1)
+    massprog     = (100 - massprog).toFixed(1)
+    clthtrad = (100 - clthprog).toFixed(1)
+    hosttrad = (100 - hostprog).toFixed(1)
+
+    setBarValue("progressive", progressive)
+    setBarValue("traditional", traditional)
+    setBarValue("regional", regional)
+    setBarValue("holysee", holysee)
+    setBarValue("women", women)
+    setBarValue("antiwomen", antiwomen)
+    setBarValue("society", society)
+    setBarValue("separation", separation)
+    setBarValue("masstrad", massprog)
+    setBarValue("massprog", masstrad)
+    setBarValue("clthprog", clthprog)
+    setBarValue("clthtrad", clthtrad)
+    setBarValue("hostprog", hostprog)
+    setBarValue("hosttrad", hosttrad)
+
+    document.getElementById("life-label").innerHTML = setLabel(progressive, lifeArray)
+    document.getElementById("church-label").innerHTML = setLabel(regional, bishArray)
+    document.getElementById("women-label").innerHTML = setLabel(women, womnArray)
+    document.getElementById("society-label").innerHTML = setLabel(society, poliArray)
+    document.getElementById("mass-label").innerHTML = setLabel(massprog, massArray)
+    document.getElementById("clothes-label").innerHTML = setLabel(clthprog, clthArray)
+    document.getElementById("host-label").innerHTML = setLabel(hostprog, hostArray)
+
+    ideology = ""
+    ideodist = Infinity
+    for (var i = 0; i < ideologies.length; i++) {
+        dist = 0
+        dist += Math.pow(Math.abs(ideologies[i].stats.life - progressive), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.womn - women), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.bish - regional), 1.73856063)
+        if (dist < ideodist) {
+            ideology = ideologies[i].name
+            ideodist = dist
+        }
+    }
+    document.getElementById("ideology-label").innerHTML = ideology
+
+    function createImage(src, x, y, w, h) {
+        img = new Image ()
+        img.src = src
+        img.onLoad = function() {
+            ctx.drawImage(img, x, y, w, h)
+        }
+    }
+
+    window.onload = function() {
+        var c = document.getElementById("banner")
+        var ctx = c.getContext("2d")
+        ctx.fillStyle = "#EEEEEE"
+        ctx.fillRect(0,0,800,650)
+
+        img = document.getElementById("img-progressive")
+        ctx.drawImage(img, 20, 170, 100, 100);
+        img = document.getElementById("img-traditional")
+        ctx.drawImage(img, 680, 170, 100, 100)
+        img = document.getElementById("img-regional")
+        ctx.drawImage(img, 20, 290, 100, 100)
+        img = document.getElementById("img-holysee")
+        ctx.drawImage(img, 680, 290, 100, 100)
+        img = document.getElementById("img-women")
+        ctx.drawImage(img, 20, 410, 100, 100)
+        img = document.getElementById("img-antiwomen")
+        ctx.drawImage(img, 680, 410, 100, 100)
+        img = document.getElementById("img-society")
+        ctx.drawImage(img, 20, 530, 100, 100)
+        img = document.getElementById("img-separation")
+        ctx.drawImage(img, 680, 530, 100, 100)
+        img = document.getElementById("img-masstrad")
+        ctx.drawImage(img, 20, 650, 100, 100)
+        img = document.getElementById("img-massprog")
+        ctx.drawImage(img, 680, 650, 100, 100)
+        img = document.getElementById("img-clthprog")
+        ctx.drawImage(img, 20, 770, 100, 100)
+        img = document.getElementById("img-clthtrad")
+        ctx.drawImage(img, 680, 770, 100, 100)
+        img = document.getElementById("img-hostprog")
+        ctx.drawImage(img, 20, 890, 100, 100)
+        img = document.getElementById("img-hosttrad")
+        ctx.drawImage(img, 680, 890, 100, 100)
+
+        ctx.fillStyle="#222222"
+        ctx.fillRect(120, 180, 560, 80)
+        ctx.fillRect(120, 300, 560, 80)
+        ctx.fillRect(120, 420, 560, 80)
+        ctx.fillRect(120, 540, 560, 80)
+        ctx.fillRect(120, 660, 560, 80)
+        ctx.fillRect(120, 780, 560, 80)
+        ctx.fillRect(120, 900, 560, 80)
+        ctx.fillStyle="#102870"
+        ctx.fillRect(120, 184, 5.6*progressive-2, 72)
+        ctx.fillStyle="#890000"
+        ctx.fillRect(682-5.6*traditional, 184, 5.6*traditional-2, 72)
+        ctx.fillStyle="#10702e"
+        ctx.fillRect(120, 304, 5.6*regional-2, 72)
+        ctx.fillStyle="#c4a717"
+        ctx.fillRect(682-5.6*holysee, 304, 5.6*holysee-2, 72)
+        ctx.fillStyle="#a1a1a1"
+        ctx.fillRect(120, 424, 5.6*women-2, 72)
+        ctx.fillStyle="#000000"
+        ctx.fillRect(682-5.6*antiwomen, 424, 5.6*antiwomen-2, 72)
+        ctx.fillStyle="#390000"
+        ctx.fillRect(120, 544, 5.6*society-2, 72)
+        ctx.fillStyle="#985c02"
+        ctx.fillRect(682-5.6*separation, 544, 5.6*separation-2, 72)
+        ctx.fillStyle="#003939"
+        ctx.fillRect(120, 664, 5.6*masstrad-2, 72)
+        ctx.fillStyle="#4a0a98"
+        ctx.fillRect(682-5.6*massprog, 664, 5.6*massprog-2, 72)
+        ctx.fillStyle="#e4e4e4"
+        ctx.fillRect(120, 784, 5.6*clthprog-2, 72)
+        ctx.fillStyle="#616161"
+        ctx.fillRect(682-5.6*clthtrad, 784, 5.6*clthtrad-2, 72)
+        ctx.fillStyle="#006d66"
+        ctx.fillRect(120, 904, 5.6*hostprog-2, 72)
+        ctx.fillStyle="#6d6900"
+        ctx.fillRect(682-5.6*hosttrad, 904, 5.6*hosttrad-2, 72)
+        ctx.fillStyle="#222222"
+        ctx.font="700 80px 'Jeju Gothic'"
+        ctx.textAlign="left"
+        ctx.fillText("CatholicValues", 20, 90)
+        ctx.font="50px 'Jeju Gothic'"
+        ctx.fillText(ideology, 20, 140)
+
+        ctx.textAlign="left"
+        if (progressive  > 30) {ctx.fillText(progressive + "%", 130, 237.5)}
+        if (regional     > 30) {ctx.fillText(regional + "%", 130, 357.5)}
+        if (women   > 30) {ctx.fillText(women + "%", 130, 477.5)}
+        if (society > 30) {ctx.fillText(society + "%", 130, 597.5)}
+        if (masstrad     > 30) {ctx.fillText(masstrad + "%", 130, 717.5)}
+        if (clthprog   > 30) {ctx.fillText(clthprog + "%", 130, 837.5)}
+        if (hostprog > 30) {ctx.fillText(hostprog + "%", 130, 957.5)}
+        ctx.textAlign="right"
+        if (traditional    > 30) {ctx.fillText(traditional + "%", 670, 237.5)}
+        if (holysee     > 30) {ctx.fillText(holysee + "%", 670, 357.5)}
+        if (antiwomen > 30) {ctx.fillText(antiwomen + "%", 670, 477.5)}
+        if (separation  > 30) {ctx.fillText(separation + "%", 670, 597.5)}
+        if (massprog     > 30) {ctx.fillText(massprog + "%", 670, 717.5)}
+        if (clthtrad > 30) {ctx.fillText(clthtrad + "%", 670, 837.5)}
+        if (hosttrad  > 30) {ctx.fillText(hosttrad + "%", 670, 957.5)}
+
+        ctx.font="300 30px Montserrat"
+        ctx.fillText("CatholicValues.github.io", 780, 60)
+		ctx.fillText(version, 780, 90)
+        ctx.textAlign="center"
+        ctx.fillText("성·생명윤리: " + document.getElementById("life-label").innerHTML, 400, 175)
+        ctx.fillText("교계제도: " + document.getElementById("bish-label").innerHTML, 400, 295)
+        ctx.fillText("여성과 교회: " + document.getElementById("womn-label").innerHTML, 400, 415)
+        ctx.fillText("사회와 교회: " + document.getElementById("poli-label").innerHTML, 400, 535)
+        ctx.fillText("전례: " + document.getElementById("mass-label").innerHTML, 400, 655)
+        ctx.fillText("복장: " + document.getElementById("clth-label").innerHTML, 400, 775)
+        ctx.fillText("성찬과 성체: " + document.getElementById("host-label").innerHTML, 400, 895)
+    }
+    </script>
+</body>
