@@ -101,7 +101,7 @@
             let final_host = host_array.reduce((a, b) => a + b, 0)
             location.href = `results.html`
                 + `?l=${calc_score(final_life,max_life)}`
-                + `&k=${calc_score(final_bish,max_bish)}`
+                + `&b=${calc_score(final_bish,max_bish)}`
                 + `&w=${calc_score(final_womn,max_womn)}`
                 + `&p=${calc_score(final_poli,max_poli)}`
                 + `&m=${calc_score(final_mass,max_mass)}`
