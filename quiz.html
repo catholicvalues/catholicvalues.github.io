@@ -84,9 +84,9 @@
             bish -= prev_answer * questions[qn].effect.bish;
             womn -= prev_answer * questions[qn].effect.womn;
             poli -= prev_answer * questions[qn].effect.poli;
-            mass += prev_answer * questions[qn].effect.mass;
-            clth += prev_answer * questions[qn].effect.clth;
-            host += prev_answer * questions[qn].effect.host;
+            mass -= prev_answer * questions[qn].effect.mass;
+            clth -= prev_answer * questions[qn].effect.clth;
+            host -= prev_answer * questions[qn].effect.host;
             prev_answer = null;
             init_question();
     
