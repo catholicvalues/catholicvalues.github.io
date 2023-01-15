@@ -226,12 +226,12 @@ div.text-wrapper {
     display: inline-block;
 }
 div.progressive {
-    background-color: #102870;
+    background-color: #3a4e8c;
     text-align: left;
     border-right-style: solid;
 }
 div.traditional {
-    background-color: #890000;
+    background-color: #a12f2f;
     text-align: right;
     border-left-style: solid;
 }
@@ -241,7 +241,7 @@ div.women {
     border-right-style: solid;
 }
 div.antiwomen {
-    background-color: #000000;
+    background-color: #797979;
     text-align: right;
     border-left-style: solid;
 }
@@ -261,17 +261,17 @@ div.separation {
     border-left-style: solid;
 }
 div.society {
-    background-color: #390000;
+    background-color: #5b3b3b;
     text-align: left;
     border-right-style: solid;
 }
 div.masstrad {
-    background-color: #003939;
+    background-color: #326a6a;
     text-align: left;
     border-right-style: solid;
 }
 div.massprog {
-    background-color: #4a0a98;
+    background-color: #7b4ab6;
     text-align: right;
     border-left-style: solid;
 }
