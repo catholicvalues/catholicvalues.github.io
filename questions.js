@@ -1,50 +1,122 @@
 questions = [
     {
-        "question": "피임은 죄가 아니다.",
+        "question": "성병을 방지하기 위한 피임은 죄가 아니다.",
         "effect": {
-            "life": 10,
+            "life": 8,
+            "bish": 0,
+            "womn": 0,
+            "poli": 0,
+            "mass": 0,
+	    "clth": 0,
+	    "host": 0
+        }
+    },
+    {
+        "question": "부부관계의 증진을 위한 피임은 죄가 아니다.",
+        "effect": {
+            "life": 2,
+            "bish": 0,
+            "womn": 0,
+            "poli": 0,
+            "mass": 0,
+	    "clth": 0,
+	    "host": 0
+        }
+    },
+    {
+        "question": "자위행위(수음)는 (고해성사를 요하는) 대죄가 아니다.",
+        "effect": {
+            "life": 3,
+            "bish": 0,
+            "womn": 0,
+            "poli": 0,
+	    "mass": 0,
+	    "clth": 0,
+	    "host": 0
+        }
+    },
+    {
+        "question": "자위행위(수음)는 죄가 아니다.",
+        "effect": {
+            "life": 8,
+            "bish": 0,
+            "womn": 0,
+            "poli": 0,
+            "mass": 0,
+	    "clth": 0,
+	    "host": 0
+        }
+    },
+    {
+        "question": "혼인 밖의 연인 간 성관계는 (고해성사를 요하는) 대죄가 아니다.",
+        "effect": {
+            "life": 6,
+            "bish": 0,
+            "womn": 0,
+            "poli": 0,
+	    "mass": 0,
+	    "clth": 0,
+	    "host": 0
+        }
+    },
+    {
+        "question": "혼인 밖의 연인 간 성관계는 죄가 아니다.",
+        "effect": {
+            "life": 2,
+            "bish": 0,
+            "womn": 0,
+            "poli": 0,
+            "mass": 0,
+	    "clth": 0,
+	    "host": 0
+        }
+    },
+    {
+        "question": "혼인 밖의 자유로운 성관계는 죄가 아니다.",
+        "effect": {
+            "life": 2,
+            "bish": 0,
+            "womn": 0,
+            "poli": 0,
+            "mass": 0,
+	    "clth": 0,
+	    "host": 0
+        }
+    },
+    {
+        "question": "혼인무효는 교회의 정당한 사목적 절차이다.",
+        "effect": {
+            "life": 1,
+            "bish": 0,
+            "womn": 0,
+            "poli": 0,
+	    "mass": 0,
+	    "clth": 0,
+	    "host": 0
+        }
+    },
+    {
+        "question": "교회는 이혼한 신자에 대해 더 열린 태도를 지녀야 한다.",
+        "effect": {
+            "life": 2,
+            "bish": 0,
+            "womn": 0,
+            "poli": 0,
+            "mass": 0,
+	    "clth": 0,
+	    "host": 0
+        }
+    },
+    {
+        "question": "이혼한 신자는 혼인무효절차 없이도 문제없이 신앙생활이 가능하다.",
+        "effect": {
+            "life": 2,
             "bish": 0,
             "womn": 0,
             "poli": 0,
             "mass": 0,
 	        "clth": 0,
 	        "host": 0
-        }
-    },
-    {
-        "question": "자위행위(수음)은 죄가 아니다.",
-        "effect": {
-            "life": 5,
-            "bish": 0,
-            "womn": 0,
-            "poli": 0,
-	    "mass": 0,
-	    "clth": 0,
-	    "host": 0
-        }
-    },
-    {
-        "question": "단순 연인 간 성관계는 죄가 아니다.",
-        "effect": {
-            "life": 10,
-            "bish": 0,
-            "womn": 0,
-            "poli": 0,
-	    "mass": 0,
-	    "clth": 0,
-	    "host": 0
-        }
-    },
-    {
-        "question": "나는 이혼에 대해 긍정한다.",
-        "effect": {
-            "life": 5,
-            "bish": 0,
-            "womn": 0,
-            "poli": 0,
-	    "mass": 0,
-	    "clth": 0,
-	    "host": 0
         }
     },
     {
@@ -84,7 +156,7 @@ questions = [
         }
     },
     {
-        "question": "노화 또한 치료할 수 있는 질병이다.",
+        "question": "노화 또한 치료할 수 있는 질병에 속한다.",
         "effect": {
             "life": 5,
             "bish": 0,
@@ -108,7 +180,7 @@ questions = [
         }
     },
     {
-        "question": "출산을 목적으로 하지 않는 혼인 또한 죄가 아니다.",
+        "question": "출산을 목적으로 하지 않는 혼인도 교회 안에서 가능하다.",
         "effect": {
             "life": 5,
             "bish": 0,
@@ -132,9 +204,9 @@ questions = [
         }
     },
     {
-        "question": "낙태는 죄가 아니다.",
+        "question": "성범죄 피해자인 여성의 낙태는 (고해성사를 요하는) 대죄가 아니다.",
         "effect": {
-            "life": 15,
+            "life": 7,
             "bish": 0,
             "womn": 0,
             "poli": 0,
@@ -144,10 +216,46 @@ questions = [
         }
     },
     {
-        "question": "주교의 행정적, 경제적 권한은 민주적으로 변해야 한다.",
+        "question": "성범죄 피해자인 여성의 낙태는 죄가 아니다.",
+        "effect": {
+            "life": 2,
+            "bish": 0,
+            "womn": 0,
+            "poli": 0,
+            "mass": 0,
+	        "clth": 0,
+	        "host": 0
+        }
+    },
+    {
+        "question": "경제적인 이유를 위해 행해지는 낙태는 (고해성사를 요하는) 대죄가 아니다.",
+        "effect": {
+            "life": 3,
+            "bish": 0,
+            "womn": 0,
+            "poli": 0,
+            "mass": 0,
+	        "clth": 0,
+	        "host": 0
+        }
+    },
+    {
+        "question": "경제적인 이유를 위해 행해지는 낙태는 죄가 아니다.",
+        "effect": {
+            "life": 3,
+            "bish": 0,
+            "womn": 0,
+            "poli": 0,
+            "mass": 0,
+	        "clth": 0,
+	        "host": 0
+        }
+    },
+    {
+        "question": "주교가 행정적, 경제적 권한을 행사할 때, 사제의 감찰을 더 받아야 한다.",
         "effect": {
             "life": 0,
-            "bish": 2.5,
+            "bish": 2,
             "womn": 0,
             "poli": 0,
 	    "mass": 0,
@@ -156,7 +264,43 @@ questions = [
         }
     },
     {
-        "question": "시노드에서의 평신도 의결권이 더욱 확대되어야 한다.",
+        "question": "주교가 행정적, 경제적 권한을 행사할 때, 평신도의 감찰이 필요하다.",
+        "effect": {
+            "life": 0,
+            "bish": 0.5,
+            "womn": 0,
+            "poli": 0,
+	    "mass": 0,
+	    "clth": 0,
+	    "host": 0
+        }
+    },
+    {
+        "question": "시노드에서 교회-정치적 사안을 의결할 때 평신도 의결권은 더욱 확대되어야 한다.",
+        "effect": {
+            "life": 0,
+            "bish": 3.5,
+            "womn": 0,
+            "poli": 0,
+	    "mass": 0,
+	    "clth": 0,
+	    "host": 0
+        }
+    },
+    {
+        "question": "시노드에서 교리적 사안을 의결할 때의 평신도 의결권이 도입되어야 한다.",
+        "effect": {
+            "life": 0,
+            "bish": 1.5,
+            "womn": 0,
+            "poli": 0,
+	    "mass": 0,
+	    "clth": 0,
+	    "host": 0
+        }
+    },
+    {
+        "question": "주교의 선출에 있어, 현행과 달리 사제들의 공개적인 토의가 필요하다.",
         "effect": {
             "life": 0,
             "bish": 5,
@@ -168,10 +312,10 @@ questions = [
         }
     },
     {
-        "question": "주교의 선출 방법은 민주적으로 변해야 한다.",
+        "question": "주교의 선출에 있어, 현행과 달리 평신도의 공개적인 토의가 필요하다.",
         "effect": {
             "life": 0,
-            "bish": 7.5,
+            "bish": 2.5,
             "womn": 0,
             "poli": 0,
 	    "mass": 0,
@@ -180,10 +324,22 @@ questions = [
         }
     },
     {
-        "question": "주교의 사목적 권한은 민주적으로 변해야 한다.",
+        "question": "주교가 사목적 권한을 행사할 때, 사제의 참여는 더욱 확대되어야 한다.",
         "effect": {
             "life": 0,
-            "bish": 10,
+            "bish": 7,
+            "womn": 0,
+            "poli": 0,
+	    "mass": 0,
+	    "clth": 0,
+	    "host": 0
+        }
+    },
+    {
+        "question": "주교가 사목적 권한을 행사할 때, 평신도 봉사자의 참여는 더욱 확대되어야 한다.",
+        "effect": {
+            "life": 0,
+            "bish": 3,
             "womn": 0,
             "poli": 0,
 	    "mass": 0,
@@ -204,10 +360,10 @@ questions = [
         }
     },
     {
-        "question": "교황의 허가 없이 지역교회의 독립적인 시노드 개최는 가능하다.",
+        "question": "교황의 허가 없이 지역교회는 독립적인 시노드 개최를 할 수 있다.",
         "effect": {
             "life": 0,
-            "bish": 10,
+            "bish": 7,
             "womn": 0,
             "poli": 0,
 	    "mass": 0,
@@ -216,7 +372,19 @@ questions = [
         }
     },
     {
-        "question": "지역 교회법의 독립성은 더욱 확대되어야 한다.",
+        "question": "교황의 허가 없이 이뤄진 지역교회의 독립적인 시노드는 교리적 구속력을 가질 수 있다.",
+        "effect": {
+            "life": 0,
+            "bish": 3,
+            "womn": 0,
+            "poli": 0,
+	    "mass": 0,
+	    "clth": 0,
+	    "host": 0
+        }
+    },
+    {
+        "question": "지역교회 교회법의 독립성은 더욱 확대되어야 한다.",
         "effect": {
             "life": 0,
             "bish": 10,
@@ -231,7 +399,19 @@ questions = [
         "question": "교황의 사후 승인이 가능하다면 지역교회의 독립적인 주교 서품은 허가될 수 있다.",
         "effect": {
             "life": 0,
-            "bish": 15,
+            "bish": 10,
+            "womn": 0,
+            "poli": 0,
+	    "mass": 0,
+	    "clth": 0,
+	    "host": 0
+        }
+    },
+    {
+        "question": "교황의 사후 승인 없이도, 지역교회의 독립적인 주교 서품은 허가될 수 있다.",
+        "effect": {
+            "life": 0,
+            "bish": 5,
             "womn": 0,
             "poli": 0,
 	    "mass": 0,
@@ -243,7 +423,19 @@ questions = [
         "question": "교황청 부서의 결정보다 지역교회의 결정이 우선이다.",
         "effect": {
             "life": 0,
-            "bish": 10,
+            "bish": 8,
+            "womn": 0,
+            "poli": 0,
+	    "mass": 0,
+	    "clth": 0,
+	    "host": 0
+        }
+    },
+    {
+        "question": "교황청 부서의 결정은 지역교회를 구속하지 못한다.",
+        "effect": {
+            "life": 0,
+            "bish": 2,
             "womn": 0,
             "poli": 0,
 	    "mass": 0,
@@ -720,7 +912,7 @@ questions = [
         }
     },
     {
-        "question": "제의를 착용하지 않더라도(영대만을 착용하거나 아예 제의를 입지 않음) 미사 집전이 가능하다.",
+        "question": "제의를 착용하지 않더라도(영대만을 착용하거나 급진적으로는 제의를 입지 않음) 미사 집전이 가능하다.",
         "effect": {
             "life": 0,
             "bish": 0,
@@ -744,7 +936,7 @@ questions = [
         }
     },
     {
-        "question": "가톨릭 신자의 배우자는 그리스도교 신자가 아니더라도 사목적 판단 하에 교회 안에서 성체를 받아 모실 수 있다.",
+        "question": "소죄 안에 있더라도 고해없이 성체를 받아 모실 수 있다.",
         "effect": {
             "life": 0,
             "bish": 0,
