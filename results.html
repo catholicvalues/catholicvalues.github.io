@@ -72,7 +72,7 @@
     <p>신학적 성향을 맞추는건 진행 중인 작업이고, 가치관과 축을 맞추는 것보다 부정확합니다.</p>
     <p>페이지 위쪽에 있는 URL을 복붙하거나 아래의 이미지를 이용해 결과를 공유할 수 있습니다. (링크)에서 설문조사에 참여해주세요. 맞춰진 성향이 틀리다고 생각하시거나 테스트 수치가 수정이 필요하다 생각하신다면 나온 결과와 자신의 성향을 ebisuzawa7919@gmail.com(영문)으로 보내주세요. 평가나 질문, 비판 등도 보내셔도됩니다.</p>
     <hr/>
-    <img src="" id="banner">
+    <img src="" width=800 height=1010 style="font-family:Montserrat"></canvas="banner">
     <button class="button" onclick="location.href='index.html';" style="background-color: #2196f3;">처음으로</button> <br>
 
     <script>
@@ -97,13 +97,13 @@
             }
         }
     
-        lifeArray = '전통적, 보수적, 중도보수적, 중도, 중도개혁적, 개혁적, 급진적'.split(', ')
-        bishArray = '성직자 관료주의, 관료주의, 일치적, 균형적, 분권주의, 민주주의, 총체적 민주주의'.split(', ')
-        womnArray = '전통적, 보수적, 중도보수적, 중도, 중도개혁적, 개혁적, 급진적'.split(', ')
-        poliArray = '완전한 정교분리, 제한적 정교분리, 중도적 정교분리, 중도, 중도적 사회참여, 제한적 사회참여, 완전한 사회참여'.split(', ')
-        massArray = '급진적, 개혁적, 중도개혁적, 균형적, 중도보수적, 보수적, 전통적'.split(', ')
-        clthArray = '복제 고수, 보수적, 중도보수적, 중도, 중도개혁적, 복제 개혁, 복제 철폐'.split(', ')
-        hostArray = '전통적, 보수적, 중도보수적, 중도, 중도개혁적, 개혁적, 급진적'.split(', ')
+        lifeArray = '급진적, 개혁적, 중도개혁적, 중도, 중도보수적, 보수적, 전통적'.split(', ')
+        bishArray = '총체적 민주주의, 민주주의, 분권주의, 균형적, 일치주의, 관료주의, 성직자 관료주의'.split(', ')
+        womnArray = '급진적, 개혁적, 중도개혁적, 중도, 중도보수적, 보수적, 전통적'.split(', ')
+        poliArray = '완전한 사회참여, 제한적 사회참여, 중도적 사회참여, 중도, 중도적 정교분리, 제한적 정교분리, 완전한 정교분리'.split(', ')
+        massArray = '전통적, 보수적, 중도보수적, 균형적, 중도개혁적, 개혁적, 급진적'.split(', ')
+        clthArray = '복제 철폐, 복제 개혁, 중도개혁적, 중도, 중도보수적, 보수적, 복제 엄수'.split(', ')
+        hostArray = '급진적, 개혁적, 중도개혁적, 중도, 중도보수적, 보수적, 전통적'.split(', ')
     
         function setLabel(val,ary) {
             if (val > 100) { return "" } else
@@ -281,7 +281,7 @@
             ctx.fillText("사회와 교회: " + document.getElementById("poli-label").innerHTML, 400, 535)
             ctx.fillText("전례: " + document.getElementById("mass-label").innerHTML, 400, 655)
             ctx.fillText("복장 : " + document.getElementById("clth-label").innerHTML, 400, 775)
-            ctx.fillText("성찬과 성체 : " +document.getElementById("host-label").innerHTML, 400, 895)
+            ctx.fillText("성찬과 성체 : " + document.getElementById("host-label").innerHTML, 400, 895)
         }
         </script>
     </body>
