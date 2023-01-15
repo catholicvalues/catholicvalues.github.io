@@ -36,7 +36,7 @@ questions = [
         }
     },
     {
-        "question": "나는 혼인 무효화와 이혼에 대해 긍정한다.",
+        "question": "나는 이혼에 대해 긍정한다.",
         "effect": {
             "life": 5,
             "bish": 0,
@@ -348,11 +348,23 @@ questions = [
         }
     },
     {
-        "question": "여성 서품은 허가되어야 한다.",
+        "question": "여성 부제 서품은 허가되어야 한다.",
         "effect": {
             "life": 0,
             "bish": 0,
-            "womn": 35,
+            "womn": 12.5,
+            "poli": 0,
+	    "mass": 0,
+	    "clth": 0,
+	    "host": 0
+        }
+    },
+    {
+        "question": "여성 사제 서품은 허가되어야 한다.",
+        "effect": {
+            "life": 0,
+            "bish": 0,
+            "womn": 22.5,
             "poli": 0,
 	    "mass": 0,
 	    "clth": 0,
