@@ -28,7 +28,7 @@ ideologies = [
         "stats": {
             "life": 65,
             "womn": 65,
-            "bish": 25
+            "bish": 20
         }
     },
     {
@@ -36,7 +36,7 @@ ideologies = [
         "stats": {
             "life": 35,
             "womn": 50,
-            "bish": 25
+            "bish": 20
         }
     },
     {
@@ -44,7 +44,7 @@ ideologies = [
         "stats": {
             "life": 35,
             "womn": 50,
-            "bish": 75
+            "bish": 80
         }
     },
     {
@@ -52,7 +52,7 @@ ideologies = [
         "stats": {
             "life": 65,
             "womn": 65,
-            "bish": 75
+            "bish": 80
         }
     },
     {
@@ -73,7 +73,7 @@ ideologies = [
     },
     {
         {
-        "name": "프로라이프",
+        "name": "프로-라이프",
         "stats": {
             "life": 20,
             "womn": 50,
@@ -97,7 +97,7 @@ ideologies = [
         }
     },
     {
-        "name": "교회민주주의",
+        "name": "중도적 ",
         "stats": {
             "life": 50,
             "womn": 50,
