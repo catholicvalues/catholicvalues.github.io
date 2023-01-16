@@ -24,19 +24,35 @@ ideologies = [
         }
     },
     {
-        "name": "교회일치적 개혁주의",
+        "name": "개혁적 성직주의",
         "stats": {
             "life": 65,
             "womn": 65,
-            "bish": 50
+            "bish": 25
         }
     },
     {
-        "name": "교회일치적 보수주의",
+        "name": "보수적 성직주의",
         "stats": {
             "life": 35,
             "womn": 50,
-            "bish": 35
+            "bish": 25
+        }
+    },
+    {
+        "name": "보수적 분권주의",
+        "stats": {
+            "life": 35,
+            "womn": 50,
+            "bish": 75
+        }
+    },
+    {
+        "name": "개혁적 분권주의",
+        "stats": {
+            "life": 65,
+            "womn": 65,
+            "bish": 75
         }
     },
     {
@@ -56,11 +72,20 @@ ideologies = [
         }
     },
     {
+        {
+        "name": "프로라이프",
+        "stats": {
+            "life": 20,
+            "womn": 50,
+            "bish": 50
+        }
+    },
+    {
         "name": "반동적 보수주의",
         "stats": {
             "life": 10,
             "womn": 10,
-            "bish": 25
+            "bish": 20
         }
     },
     {
