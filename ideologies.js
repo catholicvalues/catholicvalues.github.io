@@ -72,7 +72,6 @@ ideologies = [
         }
     },
     {
-        {
         "name": "프로-라이프",
         "stats": {
             "life": 20,
