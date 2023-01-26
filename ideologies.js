@@ -80,7 +80,7 @@ ideologies = [
         }
     },
     {
-        "name": "반동적 보수주의",
+        "name": "급진적 보수주의",
         "stats": {
             "life": 10,
             "womn": 10,
@@ -96,11 +96,11 @@ ideologies = [
         }
     },
     {
-        "name": "중도적 ",
+        "name": "분권주의",
         "stats": {
             "life": 50,
             "womn": 50,
-            "bish": 80
+            "bish": 90
         }
     },
     {
