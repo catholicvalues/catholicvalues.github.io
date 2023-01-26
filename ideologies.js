@@ -80,7 +80,7 @@ ideologies = [
         }
     },
     {
-        "name": "급진적 보수주의",
+        "name": "전통적 보수주의",
         "stats": {
             "life": 10,
             "womn": 10,
