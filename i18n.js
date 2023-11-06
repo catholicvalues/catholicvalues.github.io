@@ -19,7 +19,7 @@ const getCookie = (name) => {
 
 const langPicker = document.getElementById("langPicker");
 const langElements = document.querySelectorAll("[data-i18n]");
-const userLang = getCookie("lang") || navigator.language || "ko";
+let userLang = getCookie("lang") || navigator.language;
 
 const l10nList = {};
 
@@ -53,6 +53,9 @@ const getTranslation = async (code) => {
 
 async function loadi18n() {
   return Promise.all([getTranslation("ko")]).then(() => {
+    if (!(userLang in l10nList)) {
+      userLang = "ko";
+    }
     showTranslation(userLang);
     if (langPicker) {
       langPicker.onchange = () => {
