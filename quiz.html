@@ -7,48 +7,55 @@
     <meta charset="utf-8">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
-      (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-6511426299019766",
-        enable_page_level_ads: true
-      });
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-6511426299019766",
+            enable_page_level_ads: true
+        });
     </script>
-    </head>
-    <body>
-    <script type="application/javascript" charset="UTF-8"
-            src="questions.js">
+</head>
+
+<body>
+    <script type="application/javascript" charset="UTF-8" src="questions.js">
     </script>
     <h1>CatholicValues</h1>
+    <select id="langPicker"></select>
     <hr>
     <h2 style="text-align:center;" id="question-number">Loading...</h2>
     <p class="question" id="question-text"></p>
-    <button class="button" onclick="next_question( 1.0)" style="background-color: #1b5e20;">적극 동의</button> <br>
-    <button class="button" onclick="next_question( 0.5)" style="background-color: #4caf50;">동의</button> <br>
-    <button class="button" onclick="next_question( 0.0)" style="background-color: #bbbbbb;">중립/현상유지</button> <br>
-    <button class="button" onclick="next_question(-0.5)" style="background-color: #f44336;">비동의</button> <br>
-    <button class="button" onclick="next_question(-1.0)" style="background-color: #b71c1c;">적극 비동의</button> <br>
+    <button class="button" data-i18n="quiz-strongly-agree" onclick="next_question( 1.0)"
+        style="background-color: #1b5e20;"></button> <br>
+    <button class="button" data-i18n="quiz-agree" onclick="next_question( 0.5)"
+        style="background-color: #4caf50;"></button> <br>
+    <button class="button" data-i18n="quiz-neutral" onclick="next_question( 0.0)"
+        style="background-color: #bbbbbb;"></button> <br>
+    <button class="button" data-i18n="quiz-disagree" onclick="next_question(-0.5)"
+        style="background-color: #f44336;"></button> <br>
+    <button class="button" data-i18n="quiz-strongly-disagree" onclick="next_question(-1.0)"
+        style="background-color: #b71c1c;"></button> <br>
     <button class="small_button" onclick="prev_question()" id="back_button">뒤로</button>
     <button class="small_button_off" id="back_button_off">뒤로</button><br>
+    <script type="application/javascript" charset="UTF-8" src="i18n.js"></script>
 
     <script>
-        var max_life, max_bish, max_womn, max_poli, max_mass, max_clth, max_host; // Max possible scores
+        let max_life, max_bish, max_womn, max_poli, max_mass, max_clth, max_host; // Max possible scores
         max_life = max_bish = max_womn = max_poli = max_mass = max_clth = max_host = 0;
-        var life, bish, womn, poli, mass, clth, host; // User's scores
+        let life, bish, womn, poli, mass, clth, host; // User's scores
         life = bish = womn = poli = mass = clth = host = 0;
-        var qn = 0; // Question number
-        var prev_answer = null;
-        init_question();
+        let qn = 0; // Question number
+        let prev_answer = null;
+        loadi18n().then(() => init_question());
         for (var i = 0; i < questions.length; i++) {
-            max_life += Math.abs(questions[i].effect.life)
-            max_bish += Math.abs(questions[i].effect.bish)
-            max_womn += Math.abs(questions[i].effect.womn)
-            max_poli += Math.abs(questions[i].effect.poli)
-            max_mass += Math.abs(questions[i].effect.mass)
-            max_clth += Math.abs(questions[i].effect.clth)
-            max_host += Math.abs(questions[i].effect.host)
+            max_life += Math.abs(questions[i].effect.life);
+            max_bish += Math.abs(questions[i].effect.bish);
+            max_womn += Math.abs(questions[i].effect.womn);
+            max_poli += Math.abs(questions[i].effect.poli);
+            max_mass += Math.abs(questions[i].effect.mass);
+            max_clth += Math.abs(questions[i].effect.clth);
+            max_host += Math.abs(questions[i].effect.host);
         }
         function init_question() {
-            document.getElementById("question-text").innerHTML = questions[qn].question;
-            document.getElementById("question-number").innerHTML = "문제 " + (qn + 1) + "/" + (questions.length);
+            document.getElementById("question-text").innerHTML = l10nList[userLang]['questions'][qn];
+            document.getElementById("question-number").innerHTML = l10nList[userLang]['quiz-question'] + " " + (qn + 1) + "/" + (questions.length);
             if (prev_answer == null) {
                 document.getElementById("back_button").style.display = 'none';
                 document.getElementById("back_button_off").style.display = 'block';
@@ -56,17 +63,17 @@
                 document.getElementById("back_button").style.display = 'block';
                 document.getElementById("back_button_off").style.display = 'none';
             }
-    
+
         }
-    
+
         function next_question(mult) {
-            life += mult*questions[qn].effect.life
-            bish += mult*questions[qn].effect.bish
-            womn += mult*questions[qn].effect.womn
-            poli += mult*questions[qn].effect.poli
-            mass += mult*questions[qn].effect.mass
-            clth += mult*questions[qn].effect.clth
-            host += mult*questions[qn].effect.host
+            life += mult * questions[qn].effect.life
+            bish += mult * questions[qn].effect.bish
+            womn += mult * questions[qn].effect.womn
+            poli += mult * questions[qn].effect.poli
+            mass += mult * questions[qn].effect.mass
+            clth += mult * questions[qn].effect.clth
+            host += mult * questions[qn].effect.host
             qn++;
             prev_answer = mult;
             if (qn < questions.length) {
@@ -89,20 +96,20 @@
             host -= prev_answer * questions[qn].effect.host;
             prev_answer = null;
             init_question();
-    
+
         }
-        function calc_score(score,max) {
-            return (100*(max+score)/(2*max)).toFixed(1)
+        function calc_score(score, max) {
+            return (100 * (max + score) / (2 * max)).toFixed(1)
         }
         function results() {
             location.href = `results.html`
-                + `?l=${calc_score(life,max_life)}`
-                + `&b=${calc_score(bish,max_bish)}`
-                + `&w=${calc_score(womn,max_womn)}`
-                + `&p=${calc_score(poli,max_poli)}`
-                + `&m=${calc_score(mass,max_mass)}`
-                + `&c=${calc_score(clth,max_clth)}`
-                + `&h=${calc_score(host,max_host)}`
+                + `?l=${calc_score(life, max_life)}`
+                + `&b=${calc_score(bish, max_bish)}`
+                + `&w=${calc_score(womn, max_womn)}`
+                + `&p=${calc_score(poli, max_poli)}`
+                + `&m=${calc_score(mass, max_mass)}`
+                + `&c=${calc_score(clth, max_clth)}`
+                + `&h=${calc_score(host, max_host)}`
         }
     </script>
-    </body>
+</body>
