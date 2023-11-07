@@ -52,20 +52,23 @@ const getTranslation = async (code) => {
 };
 
 async function loadi18n() {
-  return Promise.all([getTranslation("ko")]).then(() => {
-    if (!(userLang in l10nList)) {
-      userLang = "ko";
-    }
-    showTranslation(userLang);
-    if (langPicker) {
-      langPicker.onchange = () => {
-        setCookie(
-          "lang",
-          langPicker.options[langPicker.selectedIndex].value,
-          7
-        );
-        window.location.reload();
-      };
-    }
-  });
+  return Promise.all([
+    getTranslation("ko")
+  ])
+    .then(() => {
+      if (!(userLang in l10nList)) {
+        userLang = "ko";
+      }
+      showTranslation(userLang);
+      if (langPicker) {
+        langPicker.onchange = () => {
+          setCookie(
+            "lang",
+            langPicker.options[langPicker.selectedIndex].value,
+            7
+          );
+          window.location.reload();
+        };
+      }
+    });
 }
