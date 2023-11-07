@@ -9,8 +9,6 @@
         version = "Intl. 1" //Remember to update this before making changes to the test itself!
     </script>
 </head>
-<script type="application/javascript" src="ideologies.js">
-</script>
 
 <body>
     <h1>CatholicValues</h1>
@@ -96,7 +94,7 @@
         </div>
         <img id="img-hosttrad" src="value_images/hosttrad.svg" height="128pt" />
     </div>
-    <h2><span data-i18n="results-nearest"></span>: <span class="weight-300" id="ideology-label"></span></h2>
+    <h2></h2>
     <p data-i18n="results-inaccurate"></p>
     <p data-i18n="results-share"></p>
     <hr />
@@ -196,19 +194,6 @@
             document.getElementById("clth-label").innerHTML = setLabel(clthprog, clthArray)
             document.getElementById("host-label").innerHTML = setLabel(hostprog, hostArray)
 
-            let ideology = ""
-            let ideodist = Infinity
-            for (let i = 0; i < ideologies.length; i++) {
-                let dist = 0
-                dist += Math.pow(Math.abs(ideologies[i].stats.life - progressive), 2)
-                dist += Math.pow(Math.abs(ideologies[i].stats.womn - women), 2)
-                dist += Math.pow(Math.abs(ideologies[i].stats.bish - regional), 1.73856063)
-                if (dist < ideodist) {
-                    ideology = l10nList[userLang]['ideologies'][i]
-                    ideodist = dist
-                }
-            }
-            document.getElementById("ideology-label").innerHTML = ideology
 
             let c = document.getElementById("banner")
             var ctx = c.getContext("2d")
@@ -285,7 +270,6 @@
             ctx.textAlign = "left"
             ctx.fillText("CatholicValues", 20, 90)
             ctx.font = "45px 'Jeju Gothic'"
-            ctx.fillText(ideology, 20, 140)
 
             ctx.textAlign = "left"
             if (progressive > 30) { ctx.fillText(progressive + "%", 130, 237.5) }
