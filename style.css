@@ -225,75 +225,45 @@ div.text-wrapper {
     color: #222222;
     display: inline-block;
 }
-div.progressive {
+div.communally {
     background-color: #3a4e8c;
     text-align: left;
     border-right-style: solid;
 }
-div.traditional {
+div.privately {
     background-color: #a12f2f;
     text-align: right;
     border-left-style: solid;
 }
-div.women {
+div.strict {
     background-color: #edda79;
     text-align: left;
     border-right-style: solid;
 }
-div.antiwomen {
+div.generous {
     background-color: #797979;
     text-align: right;
     border-left-style: solid;
 }
-div.holysee {
+div.social {
     background-color: #c4a717;
-    text-align: right;
-    border-left-style: solid;
+    text-align: left;
+    border-right-style: solid;
 }
-div.regional {
+div.personal {
     background-color: #10702e;
-    text-align: left;
-    border-right-style: solid;
+    text-align: right;
+    border-left-style: solid;
 }
-div.separation {
+div.modern {
     background-color: #985c02;
-    text-align: right;
-    border-left-style: solid;
+    text-align: left;
+    border-right-style: solid;
 }
-div.society {
+div.traditional {
     background-color: #5b3b3b;
-    text-align: left;
-    border-right-style: solid;
-}
-div.masstrad {
-    background-color: #326a6a;
-    text-align: left;
-    border-right-style: solid;
-}
-div.massprog {
-    background-color: #7b4ab6;
     text-align: right;
     border-left-style: solid;
-}
-div.clthprog {
-    background-color: #e4e4e4;
-    text-align: right;
-    border-left-style: solid;
-}
-div.clthtrad {
-    background-color: #616161;
-    text-align: left;
-    border-right-style: solid;
-}
-div.hostprog {
-    background-color: #006d66;
-    text-align: right;
-    border-left-style: solid;
-}
-div.hosttrad {
-    background-color: #6d6900;
-    text-align: left;
-    border-right-style: solid;
 }
 span.weight-300 {
     font-weight: 300;

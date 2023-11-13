@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <head>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
     <link href='style.css' rel='stylesheet' type='text/css'>
@@ -5,13 +7,6 @@
     <link rel="icon" type="x-icon" href="icon.png">
     <link rel="shortcut icon" type="x-icon" href="icon.png">
     <meta charset="utf-8">
-
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-6511426299019766",
-            enable_page_level_ads: true
-        });
     </script>
 </head>
 
@@ -64,18 +59,14 @@
     <select id="langPicker"></select>
     <hr>
     <!-- <center><img src="values.svg" style="margin:auto; max-width:100%; height:auto; display:block"></center><br> -->
-    <button class="button" id="start" data-i18n="index-start" onclick="location.href='instructions.html';"></button>
 
-    <h2 data-i18n="index-whatisit-h2"></h2>
-    <p data-i18n="index-whatisit-p"></p>
+    <h2 data-i18n="explanation-intro-h2"></h2>
+    <p data-i18n="explanation-intro-p"></p>
 
-    <h2 data-i18n="index-axes-h2"></h2>
-    <p data-i18n="axes-intro"></p>
     <div class="explanation_bg">
         <div class="spacer">
             <div class="explanation_blurb_left">
                 <p class="value"><b style="color:#102870;" data-i18n="axes-comm-left-name"></b></p>
-                <p class="blurb-text" data-i18n="axes-comm-left-expl"></p>
             </div>
             <div class="explanation_axis">
                 <p class="axis_name" data-i18n="axes-comm"></p>
@@ -83,13 +74,11 @@
             </div>
             <div class="explanation_blurb_right">
                 <p class="value"><b style="color:#890000;" data-i18n="axes-comm-right-name"></b></p>
-                <p class="blurb-text" data-i18n="axes-comm-right-expl"></p>
             </div>
         </div>
         <div class="spacer">
             <div class="explanation_blurb_left">
                 <p class="value"><b style="color:#10702e;" data-i18n="axes-fath-left-name"></b></p>
-                <p class="blurb-text" data-i18n="axes-fath-left-expl"></p>
             </div>
             <div class="explanation_axis">
                 <p class="axis_name" data-i18n="axes-fath"></p>
@@ -97,13 +86,11 @@
             </div>
             <div class="explanation_blurb_right">
                 <p class="value"><b style="color:#c4a717;" data-i18n="axes-fath-right-name"></b></p>
-                <p class="blurb-text" data-i18n="axes-fath-right-expl"></p>
             </div>
         </div>
         <div class="spacer">
             <div class="explanation_blurb_left">
                 <p class="value"><b style="color:#a1a1a1;" data-i18n="axes-socl-left-name"></b></p>
-                <p class="blurb-text" data-i18n="axes-socl-left-expl"></p>
             </div>
             <div class="explanation_axis">
                 <p class="axis_name" data-i18n="axes-socl"></p>
@@ -111,13 +98,11 @@
             </div>
             <div class="explanation_blurb_right">
                 <p class="value"><b style="color:#000000;" data-i18n="axes-socl-right-name"></b></p>
-                <p class="blurb-text" data-i18n="axes-socl-right-expl"></p>
             </div>
         </div>
         <div class="spacer">
             <div class="explanation_blurb_left">
                 <p class="value"><b style="color:#003939;" data-i18n="axes-mass-left-name"></b></p>
-                <p class="blurb-text" data-i18n="axes-mass-left-expl"></p>
             </div>
             <div class="explanation_axis">
                 <p class="axis_name" data-i18n="axes-mass"></p>
@@ -125,10 +110,12 @@
             </div>
             <div class="explanation_blurb_right">
                 <p class="value"><b style="color:#4a0a98;" data-i18n="axes-mass-right-name"></b></p>
-                <p class="blurb-text" data-i18n="axes-mass-right-expl"></p>
             </div>
         </div>
         <br />
+    </div>
+
+    <div class="explanation_bg" id="questions">
     </div>
     <h2 data-i18n="index-feedback-h2"></h2>
     <p>¯\\_(ツ)_/¯</p>
@@ -136,6 +123,7 @@
     <p data-i18n="index-feedback-p"></p>
     <br /><br />
     <footer>
+        <p>2023년 1월, 대한민국에서 처음 개발된 이 테스트는 세번의 개정을 거쳤습니다.</p>
     </footer>
 
 
@@ -144,7 +132,25 @@
     <script type="application/javascript" src="i18n.js"></script>
     <script type="text/javascript">
         loadi18n().then(() => {
-            document.getElementById("numOfQuestions").innerHTML = tmp_questions.length;
+            const explanation = document.getElementById('questions');
+            for (let i = 0; i < tmp_questions.length; i++) {
+                const question_block = document.createElement('div');
+                question_block.className = 'spacer';
+                const question = document.createElement('p');
+                question.innerText = l10nList[userLang]['questions'][i];
+                const scores = document.createElement('p');
+                scores.innerHTML = `<b>${tmp_questions[i].effect.comm === Math.abs(tmp_questions[i].effect.comm) ? l10nList[userLang]['axes-comm-left-name'] : l10nList[userLang]['axes-comm-right-name']}</b>`
+                    + `: ${Math.abs(tmp_questions[i].effect.comm)}, `
+                    + `<b>${tmp_questions[i].effect.fath === Math.abs(tmp_questions[i].effect.fath) ? l10nList[userLang]['axes-fath-left-name'] : l10nList[userLang]['axes-fath-right-name']}</b>`
+                    + `: ${Math.abs(tmp_questions[i].effect.fath)}, `
+                    + `<b>${tmp_questions[i].effect.socl === Math.abs(tmp_questions[i].effect.socl) ? l10nList[userLang]['axes-socl-left-name'] : l10nList[userLang]['axes-socl-right-name']}</b>`
+                    + `: ${Math.abs(tmp_questions[i].effect.socl)}, `
+                    + `<b>${tmp_questions[i].effect.mass === Math.abs(tmp_questions[i].effect.mass) ? l10nList[userLang]['axes-mass-left-name'] : l10nList[userLang]['axes-mass-right-name']}</b>`
+                    + `: ${Math.abs(tmp_questions[i].effect.mass)}`;
+                question_block.appendChild(question);
+                question_block.appendChild(scores);
+                explanation.appendChild(question_block);
+            }
         });
     </script>
 </body>

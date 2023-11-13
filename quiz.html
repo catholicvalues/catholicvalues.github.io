@@ -34,27 +34,38 @@
         style="background-color: #b71c1c;"></button> <br>
     <button class="small_button" onclick="prev_question()" id="back_button">뒤로</button>
     <button class="small_button_off" id="back_button_off">뒤로</button><br>
-    <script type="application/javascript" charset="UTF-8" src="i18n.js"></script>
 
+    <script type="application/javascript" charset="UTF-8" src="i18n.js"></script>
     <script>
-        let max_life, max_bish, max_womn, max_poli, max_mass, max_clth, max_host; // Max possible scores
-        max_life = max_bish = max_womn = max_poli = max_mass = max_clth = max_host = 0;
-        let life, bish, womn, poli, mass, clth, host; // User's scores
-        life = bish = womn = poli = mass = clth = host = 0;
+        let max_comm, max_fath, max_socl, max_mass; // Max possible scores
+        max_comm = max_fath = max_socl = max_mass = 0;
+        let comm, fath, socl, mass; // User's scores
+        comm = fath = socl = mass = 0;
         let qn = 0; // Question number
         let prev_answer = null;
-        loadi18n().then(() => init_question());
-        for (var i = 0; i < questions.length; i++) {
-            max_life += Math.abs(questions[i].effect.life);
-            max_bish += Math.abs(questions[i].effect.bish);
-            max_womn += Math.abs(questions[i].effect.womn);
-            max_poli += Math.abs(questions[i].effect.poli);
-            max_mass += Math.abs(questions[i].effect.mass);
-            max_clth += Math.abs(questions[i].effect.clth);
-            max_host += Math.abs(questions[i].effect.host);
+
+
+        const questions = [], l10n_questions = [];
+        let tmp_l10n_questions;
+
+
+        loadi18n().then(() => {
+            tmp_l10n_questions = l10nList[userLang]['questions'];
+            for (let i = tmp_questions.length; i > 0; i--) {
+                const random_number = Math.floor(Math.random() * i);
+                questions.push(tmp_questions.splice(random_number, 1)[0]);
+                l10n_questions.push(tmp_l10n_questions.splice(random_number, 1)[0]);
+            }
+            init_question()
+        });
+        for (let i = 0; i < tmp_questions.length; i++) {
+            max_comm += Math.abs(tmp_questions[i].effect.comm);
+            max_fath += Math.abs(tmp_questions[i].effect.fath);
+            max_socl += Math.abs(tmp_questions[i].effect.socl);
+            max_mass += Math.abs(tmp_questions[i].effect.mass);
         }
         function init_question() {
-            document.getElementById("question-text").innerHTML = l10nList[userLang]['questions'][qn];
+            document.getElementById("question-text").innerHTML = l10n_questions[qn];
             document.getElementById("question-number").innerHTML = l10nList[userLang]['quiz-question'] + " " + (qn + 1) + "/" + (questions.length);
             if (prev_answer == null) {
                 document.getElementById("back_button").style.display = 'none';
@@ -67,13 +78,10 @@
         }
 
         function next_question(mult) {
-            life += mult * questions[qn].effect.life
-            bish += mult * questions[qn].effect.bish
-            womn += mult * questions[qn].effect.womn
-            poli += mult * questions[qn].effect.poli
+            comm += mult * questions[qn].effect.comm
+            fath += mult * questions[qn].effect.fath
+            socl += mult * questions[qn].effect.socl
             mass += mult * questions[qn].effect.mass
-            clth += mult * questions[qn].effect.clth
-            host += mult * questions[qn].effect.host
             qn++;
             prev_answer = mult;
             if (qn < questions.length) {
@@ -87,13 +95,10 @@
                 return;
             }
             qn--;
-            life -= prev_answer * questions[qn].effect.life;
-            bish -= prev_answer * questions[qn].effect.bish;
-            womn -= prev_answer * questions[qn].effect.womn;
-            poli -= prev_answer * questions[qn].effect.poli;
+            comm -= prev_answer * questions[qn].effect.comm;
+            fath -= prev_answer * questions[qn].effect.fath;
+            socl -= prev_answer * questions[qn].effect.socl;
             mass -= prev_answer * questions[qn].effect.mass;
-            clth -= prev_answer * questions[qn].effect.clth;
-            host -= prev_answer * questions[qn].effect.host;
             prev_answer = null;
             init_question();
 
@@ -103,13 +108,10 @@
         }
         function results() {
             location.href = `results.html`
-                + `?l=${calc_score(life, max_life)}`
-                + `&b=${calc_score(bish, max_bish)}`
-                + `&w=${calc_score(womn, max_womn)}`
-                + `&p=${calc_score(poli, max_poli)}`
+                + `?c=${calc_score(comm, max_comm)}`
+                + `&f=${calc_score(fath, max_fath)}`
+                + `&s=${calc_score(socl, max_socl)}`
                 + `&m=${calc_score(mass, max_mass)}`
-                + `&c=${calc_score(clth, max_clth)}`
-                + `&h=${calc_score(host, max_host)}`
         }
     </script>
 </body>

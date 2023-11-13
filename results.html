@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <head>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
     <link href='style.css' rel='stylesheet' type='text/css'>
@@ -6,7 +8,7 @@
     <link rel="shortcut icon" type="x-icon" href="icon.png">
     <meta charset="utf-8">
     <script>
-        version = "Intl. 1" //Remember to update this before making changes to the test itself!
+        version = "Intl. α" //Remember to update this before making changes to the test itself!
     </script>
 </head>
 
@@ -17,90 +19,58 @@
 
     <h1 data-i18n="results-h1"></h1>
 
-    <h2><span data-i18n="axes-life"></span>: <span class="weight-300" id="life-label"></span></h2>
+    <h2><span data-i18n="axes-comm"></span>: <span class="weight-300" id="comm-label"></span></h2>
     <div class="axis">
-        <img id="img-progressive" src="value_images/progressive.svg" height="128pt" />
-        <div class="bar progressive" id="bar-progressive">
-            <div class="text-wrapper" id="progressive"></div>
+        <img id="img-communally" src="value_images/communally.svg" height="128pt" />
+        <div class="bar communally" id="bar-communally">
+            <div class="text-wrapper" id="communally"></div>
+        </div>
+        <div class="bar privately" id="bar-privately">
+            <div class="text-wrapper" id="privately"></div>
+        </div>
+        <img id="img-privately" src="value_images/privately.svg" height="128pt" />
+    </div>
+    <h2><span data-i18n="axes-fath"></span>: <span class="weight-300" id="fath-label"></span></h2>
+    <div class="axis">
+        <img id="img-strict" src="value_images/strict.svg" height="128pt" />
+        <div class="bar strict" id="bar-strict">
+            <div class="text-wrapper" id="strict"></div>
+        </div>
+        <div class="bar generous" id="bar-generous">
+            <div class="text-wrapper" id="generous"></div>
+        </div>
+        <img id="img-generous" src="value_images/generous.svg" height="128pt" />
+    </div>
+    <h2><span data-i18n="axes-socl"></span>: <span class="weight-300" id="socl-label"></span></h2>
+    <div class="axis">
+        <img id="img-social" src="value_images/social.svg" height="128pt" />
+        <div class="bar social" id="bar-social">
+            <div class="text-wrapper" id="social"></div>
+        </div>
+        <div class="bar personal" id="bar-personal">
+            <div class="text-wrapper" id="personal"></div>
+        </div>
+        <img id="img-personal" src="value_images/personal.svg" height="128pt" />
+    </div>
+    <h2><span data-i18n="axes-mass"></span>: <span class="weight-300" id="mass-label"></span></h2>
+    <div class="axis">
+        <img id="img-modern" src="value_images/modern.svg" height="128pt" />
+        <div class="bar modern" id="bar-modern">
+            <div class="text-wrapper" id="modern"></div>
         </div>
         <div class="bar traditional" id="bar-traditional">
             <div class="text-wrapper" id="traditional"></div>
         </div>
         <img id="img-traditional" src="value_images/traditional.svg" height="128pt" />
     </div>
-    <h2><span data-i18n="axes-bish"></span>: <span class="weight-300" id="bish-label"></span></h2>
-    <div class="axis">
-        <img id="img-regional" src="value_images/regional.svg" height="128pt" />
-        <div class="bar regional" id="bar-regional">
-            <div class="text-wrapper" id="regional"></div>
-        </div>
-        <div class="bar holysee" id="bar-holysee">
-            <div class="text-wrapper" id="holysee"></div>
-        </div>
-        <img id="img-holysee" src="value_images/holysee.svg" height="128pt" />
-    </div>
-    <h2><span data-i18n="axes-womn"></span>: <span class="weight-300" id="womn-label"></span></h2>
-    <div class="axis">
-        <img id="img-women" src="value_images/women.svg" height="128pt" />
-        <div class="bar women" id="bar-women">
-            <div class="text-wrapper" id="women"></div>
-        </div>
-        <div class="bar antiwomen" id="bar-antiwomen">
-            <div class="text-wrapper" id="antiwomen"></div>
-        </div>
-        <img id="img-antiwomen" src="value_images/antiwomen.svg" height="128pt" />
-    </div>
-    <h2><span data-i18n="axes-poli"></span>: <span class="weight-300" id="poli-label"></span></h2>
-    <div class="axis">
-        <img id="img-society" src="value_images/society.svg" height="128pt" />
-        <div class="bar society" id="bar-society">
-            <div class="text-wrapper" id="society"></div>
-        </div>
-        <div class="bar separation" id="bar-separation">
-            <div class="text-wrapper" id="separation"></div>
-        </div>
-        <img id="img-separation" src="value_images/separation.svg" height="128pt" />
-    </div>
-    <h2><span data-i18n="axes-mass"></span>: <span class="weight-300" id="mass-label"></span></h2>
-    <div class="axis">
-        <img id="img-masstrad" src="value_images/masstrad.svg" height="128pt" />
-        <div class="bar masstrad" id="bar-masstrad">
-            <div class="text-wrapper" id="masstrad"></div>
-        </div>
-        <div class="bar massprog" id="bar-massprog">
-            <div class="text-wrapper" id="massprog"></div>
-        </div>
-        <img id="img-massprog" src="value_images/massprog.svg" height="128pt" />
-    </div>
-    <h2><span data-i18n="axes-clth"></span>: <span class="weight-300" id="clth-label"></span></h2>
-    <div class="axis">
-        <img id="img-clthprog" src="value_images/clthprog.svg" height="128pt" />
-        <div class="bar clthprog" id="bar-clthprog">
-            <div class="text-wrapper" id="clthprog"></div>
-        </div>
-        <div class="bar clthtrad" id="bar-clthtrad">
-            <div class="text-wrapper" id="clthtrad"></div>
-        </div>
-        <img id="img-clthtrad" src="value_images/clthtrad.svg" height="128pt" />
-    </div>
-    <h2><span data-i18n="axes-host"></span>: <span class="weight-300" id="host-label"></span></h2>
-    <div class="axis">
-        <img id="img-hostprog" src="value_images/hostprog.svg" height="128pt" />
-        <div class="bar hostprog" id="bar-hostprog">
-            <div class="text-wrapper" id="hostprog"></div>
-        </div>
-        <div class="bar hosttrad" id="bar-hosttrad">
-            <div class="text-wrapper" id="hosttrad"></div>
-        </div>
-        <img id="img-hosttrad" src="value_images/hosttrad.svg" height="128pt" />
-    </div>
     <h2></h2>
     <p data-i18n="results-inaccurate"></p>
     <p data-i18n="results-share"></p>
     <hr />
-    <canvas id="banner" width=800 height=1010 style="font-family:Montserrat"></canvas>
+    <canvas id="banner" width=800 height=650 style="font-family:Montserrat"></canvas>
     <button class="button" data-i18n="results-goback" onclick="location.href='index.html';"
         style="background-color: #2196f3;"></button> <br>
+    <p data-i18n="results-explanation"></p><a href="./explanation.html">Here</a>
 
     <script src="i18n.js"></script>
     <script>
@@ -148,51 +118,34 @@
             await loadi18n();
 
 
-            const lifeArray = l10nList[userLang]["life-array"].split(', ')
-            const bishArray = l10nList[userLang]["bish-array"].split(', ')
-            const womnArray = l10nList[userLang]["womn-array"].split(', ')
-            const poliArray = l10nList[userLang]["poli-array"].split(', ')
+            const commArray = l10nList[userLang]["comm-array"].split(', ')
+            const fathArray = l10nList[userLang]["fath-array"].split(', ')
+            const soclArray = l10nList[userLang]["socl-array"].split(', ')
             const massArray = l10nList[userLang]["mass-array"].split(', ')
-            const clthArray = l10nList[userLang]["clth-array"].split(', ')
-            const hostArray = l10nList[userLang]["host-array"].split(', ')
 
-            const progressive = getQueryVariable("l")
-            const regional = getQueryVariable("b")
-            const women = getQueryVariable("w")
-            const society = getQueryVariable("p")
-            const masstrad = getQueryVariable("m")
-            const clthprog = getQueryVariable("c")
-            const hostprog = getQueryVariable("h")
-            const traditional = (100 - progressive).toFixed(1)
-            const holysee = (100 - regional).toFixed(1)
-            const antiwomen = (100 - women).toFixed(1)
-            const separation = (100 - society).toFixed(1)
-            const massprog = (100 - masstrad).toFixed(1)
-            const clthtrad = (100 - clthprog).toFixed(1)
-            const hosttrad = (100 - hostprog).toFixed(1)
+            const communally = getQueryVariable("c")
+            const strict = getQueryVariable("f")
+            const social = getQueryVariable("s")
+            const modern = getQueryVariable("m")
 
-            setBarValue("progressive", progressive)
+            const privately = (100 - communally).toFixed(1)
+            const generous = (100 - strict).toFixed(1)
+            const personal = (100 - social).toFixed(1)
+            const traditional = (100 - modern).toFixed(1)
+
+            setBarValue("communally", communally)
+            setBarValue("privately", privately)
+            setBarValue("strict", strict)
+            setBarValue("generous", generous)
+            setBarValue("social", social)
+            setBarValue("personal", personal)
+            setBarValue("modern", modern)
             setBarValue("traditional", traditional)
-            setBarValue("regional", regional)
-            setBarValue("holysee", holysee)
-            setBarValue("women", women)
-            setBarValue("antiwomen", antiwomen)
-            setBarValue("society", society)
-            setBarValue("separation", separation)
-            setBarValue("masstrad", masstrad)
-            setBarValue("massprog", massprog)
-            setBarValue("clthprog", clthprog)
-            setBarValue("clthtrad", clthtrad)
-            setBarValue("hostprog", hostprog)
-            setBarValue("hosttrad", hosttrad)
 
-            document.getElementById("life-label").innerHTML = setLabel(progressive, lifeArray)
-            document.getElementById("bish-label").innerHTML = setLabel(regional, bishArray)
-            document.getElementById("womn-label").innerHTML = setLabel(women, womnArray)
-            document.getElementById("poli-label").innerHTML = setLabel(society, poliArray)
-            document.getElementById("mass-label").innerHTML = setLabel(masstrad, massArray)
-            document.getElementById("clth-label").innerHTML = setLabel(clthprog, clthArray)
-            document.getElementById("host-label").innerHTML = setLabel(hostprog, hostArray)
+            document.getElementById("comm-label").innerHTML = setLabel(communally, commArray)
+            document.getElementById("fath-label").innerHTML = setLabel(strict, fathArray)
+            document.getElementById("socl-label").innerHTML = setLabel(social, soclArray)
+            document.getElementById("mass-label").innerHTML = setLabel(modern, massArray)
 
 
             let c = document.getElementById("banner")
@@ -200,71 +153,44 @@
             ctx.fillStyle = "#EEEEEE"
             ctx.fillRect(0, 0, 800, 1010)
 
-            img = document.getElementById("img-progressive")
+            img = document.getElementById("img-communally")
             ctx.drawImage(img, 20, 170, 100, 100);
-            img = document.getElementById("img-traditional")
+            img = document.getElementById("img-privately")
             ctx.drawImage(img, 680, 170, 100, 100)
-            img = document.getElementById("img-regional")
+            img = document.getElementById("img-strict")
             ctx.drawImage(img, 20, 290, 100, 100)
-            img = document.getElementById("img-holysee")
+            img = document.getElementById("img-generous")
             ctx.drawImage(img, 680, 290, 100, 100)
-            img = document.getElementById("img-women")
+            img = document.getElementById("img-social")
             ctx.drawImage(img, 20, 410, 100, 100)
-            img = document.getElementById("img-antiwomen")
+            img = document.getElementById("img-personal")
             ctx.drawImage(img, 680, 410, 100, 100)
-            img = document.getElementById("img-society")
+            img = document.getElementById("img-modern")
             ctx.drawImage(img, 20, 530, 100, 100)
-            img = document.getElementById("img-separation")
+            img = document.getElementById("img-traditional")
             ctx.drawImage(img, 680, 530, 100, 100)
-            img = document.getElementById("img-masstrad")
-            ctx.drawImage(img, 20, 650, 100, 100)
-            img = document.getElementById("img-massprog")
-            ctx.drawImage(img, 680, 650, 100, 100)
-            img = document.getElementById("img-clthprog")
-            ctx.drawImage(img, 20, 770, 100, 100)
-            img = document.getElementById("img-clthtrad")
-            ctx.drawImage(img, 680, 770, 100, 100)
-            img = document.getElementById("img-hostprog")
-            ctx.drawImage(img, 20, 890, 100, 100)
-            img = document.getElementById("img-hosttrad")
-            ctx.drawImage(img, 680, 890, 100, 100)
 
             ctx.fillStyle = "#222222"
             ctx.fillRect(120, 180, 560, 80)
             ctx.fillRect(120, 300, 560, 80)
             ctx.fillRect(120, 420, 560, 80)
             ctx.fillRect(120, 540, 560, 80)
-            ctx.fillRect(120, 660, 560, 80)
-            ctx.fillRect(120, 780, 560, 80)
-            ctx.fillRect(120, 900, 560, 80)
             ctx.fillStyle = "#3a4e8c"
-            ctx.fillRect(120, 184, 5.6 * progressive - 2, 72)
+            ctx.fillRect(120, 184, 5.6 * communally - 2, 72)
             ctx.fillStyle = "#a12f2f"
-            ctx.fillRect(682 - 5.6 * traditional, 184, 5.6 * traditional - 2, 72)
+            ctx.fillRect(682 - 5.6 * privately, 184, 5.6 * privately - 2, 72)
             ctx.fillStyle = "#10702e"
-            ctx.fillRect(120, 304, 5.6 * regional - 2, 72)
+            ctx.fillRect(120, 304, 5.6 * strict - 2, 72)
             ctx.fillStyle = "#c4a717"
-            ctx.fillRect(682 - 5.6 * holysee, 304, 5.6 * holysee - 2, 72)
+            ctx.fillRect(682 - 5.6 * generous, 304, 5.6 * generous - 2, 72)
             ctx.fillStyle = "#edda79"
-            ctx.fillRect(120, 424, 5.6 * women - 2, 72)
+            ctx.fillRect(120, 424, 5.6 * social - 2, 72)
             ctx.fillStyle = "#797979"
-            ctx.fillRect(682 - 5.6 * antiwomen, 424, 5.6 * antiwomen - 2, 72)
+            ctx.fillRect(682 - 5.6 * personal, 424, 5.6 * personal - 2, 72)
             ctx.fillStyle = "#5b3b3b"
-            ctx.fillRect(120, 544, 5.6 * society - 2, 72)
+            ctx.fillRect(120, 544, 5.6 * modern - 2, 72)
             ctx.fillStyle = "#985c02"
-            ctx.fillRect(682 - 5.6 * separation, 544, 5.6 * separation - 2, 72)
-            ctx.fillStyle = "#326a6a"
-            ctx.fillRect(120, 664, 5.6 * masstrad - 2, 72)
-            ctx.fillStyle = "#7b4ab6"
-            ctx.fillRect(682 - 5.6 * massprog, 664, 5.6 * massprog - 2, 72)
-            ctx.fillStyle = "#e4e4e4"
-            ctx.fillRect(120, 784, 5.6 * clthprog - 2, 72)
-            ctx.fillStyle = "#616161"
-            ctx.fillRect(682 - 5.6 * clthtrad, 784, 5.6 * clthtrad - 2, 72)
-            ctx.fillStyle = "#006d66"
-            ctx.fillRect(120, 904, 5.6 * hostprog - 2, 72)
-            ctx.fillStyle = "#6d6900"
-            ctx.fillRect(682 - 5.6 * hosttrad, 904, 5.6 * hosttrad - 2, 72)
+            ctx.fillRect(682 - 5.6 * traditional, 544, 5.6 * traditional - 2, 72)
             ctx.fillStyle = "#222222"
             ctx.font = "700 60px 'Jeju Gothic'"
             ctx.textAlign = "left"
@@ -272,33 +198,24 @@
             ctx.font = "45px 'Jeju Gothic'"
 
             ctx.textAlign = "left"
-            if (progressive > 30) { ctx.fillText(progressive + "%", 130, 237.5) }
-            if (regional > 30) { ctx.fillText(regional + "%", 130, 357.5) }
-            if (women > 30) { ctx.fillText(women + "%", 130, 477.5) }
-            if (society > 30) { ctx.fillText(society + "%", 130, 597.5) }
-            if (masstrad > 30) { ctx.fillText(masstrad + "%", 130, 717.5) }
-            if (clthprog > 30) { ctx.fillText(clthprog + "%", 130, 837.5) }
-            if (hostprog > 30) { ctx.fillText(hostprog + "%", 130, 957.5) }
+            if (communally > 30) { ctx.fillText(communally + "%", 130, 237.5) }
+            if (strict > 30) { ctx.fillText(strict + "%", 130, 357.5) }
+            if (social > 30) { ctx.fillText(social + "%", 130, 477.5) }
+            if (modern > 30) { ctx.fillText(modern + "%", 130, 597.5) }
             ctx.textAlign = "right"
-            if (traditional > 30) { ctx.fillText(traditional + "%", 670, 237.5) }
-            if (holysee > 30) { ctx.fillText(holysee + "%", 670, 357.5) }
-            if (antiwomen > 30) { ctx.fillText(antiwomen + "%", 670, 477.5) }
-            if (separation > 30) { ctx.fillText(separation + "%", 670, 597.5) }
-            if (massprog > 30) { ctx.fillText(massprog + "%", 670, 717.5) }
-            if (clthtrad > 30) { ctx.fillText(clthtrad + "%", 670, 837.5) }
-            if (hosttrad > 30) { ctx.fillText(hosttrad + "%", 670, 957.5) }
+            if (privately > 30) { ctx.fillText(privately + "%", 670, 237.5) }
+            if (generous > 30) { ctx.fillText(generous + "%", 670, 357.5) }
+            if (personal > 30) { ctx.fillText(personal + "%", 670, 477.5) }
+            if (traditional > 30) { ctx.fillText(traditional + "%", 670, 597.5) }
 
             ctx.font = "300 20px Montserrat"
             ctx.fillText("CatholicValues.github.io", 780, 60)
             ctx.fillText(version, 780, 90)
             ctx.textAlign = "center"
-            ctx.fillText(l10nList[userLang]['axes-life'] + ": " + document.getElementById("life-label").innerHTML, 400, 175)
-            ctx.fillText(l10nList[userLang]['axes-bish'] + ": " + document.getElementById("bish-label").innerHTML, 400, 295)
-            ctx.fillText(l10nList[userLang]['axes-womn'] + ": " + document.getElementById("womn-label").innerHTML, 400, 415)
-            ctx.fillText(l10nList[userLang]['axes-poli'] + ": " + document.getElementById("poli-label").innerHTML, 400, 535)
-            ctx.fillText(l10nList[userLang]['axes-mass'] + ": " + document.getElementById("mass-label").innerHTML, 400, 655)
-            ctx.fillText(l10nList[userLang]['axes-clth'] + ": " + document.getElementById("clth-label").innerHTML, 400, 775)
-            ctx.fillText(l10nList[userLang]['axes-host'] + ": " + document.getElementById("host-label").innerHTML, 400, 895)
+            ctx.fillText(l10nList[userLang]['axes-comm'] + ": " + document.getElementById("comm-label").innerHTML, 400, 175)
+            ctx.fillText(l10nList[userLang]['axes-fath'] + ": " + document.getElementById("fath-label").innerHTML, 400, 295)
+            ctx.fillText(l10nList[userLang]['axes-socl'] + ": " + document.getElementById("socl-label").innerHTML, 400, 415)
+            ctx.fillText(l10nList[userLang]['axes-mass'] + ": " + document.getElementById("mass-label").innerHTML, 400, 535)
         }
     </script>
 </body>
